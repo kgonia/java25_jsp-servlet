@@ -1,5 +1,6 @@
 package org.sda.java25.trainings2.users;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,5 +27,8 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute(USER_SESSION_KEY, userOptional.get());
         }
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/");
+        requestDispatcher.forward(req, resp);
     }
 }

@@ -14,4 +14,8 @@ public class CourseService {
     public List<Course> findAllCourses(){
         return courseRepository.findAllCourse();
     }
+
+    public void delete(String name) {
+        courseRepository.delete(name);
+    }
 }

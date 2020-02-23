@@ -10,6 +10,8 @@ public class User {
 
     private String password;
 
+    private boolean admin;
+
     public User(String name, String email, String login, String password) {
         this.name = name;
         this.email = email;
@@ -47,5 +49,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
     }
 }

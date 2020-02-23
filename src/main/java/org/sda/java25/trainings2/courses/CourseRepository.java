@@ -27,4 +27,9 @@ public class CourseRepository implements ICourseRepository {
     public List<Course> findAllCourse() {
         return new ArrayList<>(courseMap.values());
     }
+
+    @Override
+    public void delete(String name) {
+        courseMap.remove(name);
+    }
 }

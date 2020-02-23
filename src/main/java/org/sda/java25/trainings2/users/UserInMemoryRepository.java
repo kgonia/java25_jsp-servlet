@@ -1,10 +1,18 @@
 package org.sda.java25.trainings2.users;
 
+import org.sda.java25.trainings2.util.PasswordUtil;
+
 import java.util.*;
 
 public class UserInMemoryRepository implements IUserRepository {
 
     private static Map<String, User> usersMap = new HashMap<>();
+
+    static {
+        User admin = new User("admin", "admin@wp.pl","admin", PasswordUtil.hashPassword("1234"));
+        admin.setAdmin(true);
+        usersMap.put(admin.getLogin(),admin);
+    }
 
     @Override
     public void addUser(User user){
