@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.sda.java25.trainings2.users.LoginServlet.USER_SESSION_KEY;
 
-@WebFilter(value = "/*")
+//@WebFilter(value = "/*")
 public class AuthFilter implements Filter {
 
     private List<String> whiteListURL;

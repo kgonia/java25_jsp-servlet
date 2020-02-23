@@ -1,5 +1,7 @@
 package org.sda.java25.trainings2.users;
 
+import org.sda.java25.trainings2.common.AbstractLogServlet;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "addUserServlet", value = "/adduser")
-public class AddUserServlet extends HttpServlet {
+public class AddUserServlet extends AbstractLogServlet {
 
     public static String PARAM_LOGIN_NAME = "login";
 
